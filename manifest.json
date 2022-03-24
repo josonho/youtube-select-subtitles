@@ -1,0 +1,10 @@
+{
+  "name": "youtube-select subtitles",
+  "description": "youtube 默认显示字幕",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["content.js"]
+}]
+}
