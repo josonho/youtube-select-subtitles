@@ -96,7 +96,7 @@ function toast(msg, duration) {
 	const messageEl = document.createElement('div')
 	messageEl.innerHTML = msg
 	messageEl.style.cssText =
-		'font-size: .32rem;color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0.6);padding: 10px 15px;margin: 0 0 0 -60px;border-radius: 4px;position: fixed;top: 50%;left: 50%;width: 130px;text-align: center;z-index: 99999999'
+		'font-size: .32rem;color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0.6);padding: 10px 15px;margin: 0 0 0 -60px;border-radius: 4px;position: fixed;top: 30px;left: 50%;width: 130px;text-align: center;z-index: 99999999'
 	document.body.appendChild(messageEl)
   setTimeout(() => {
     document.body.removeChild(messageEl)
