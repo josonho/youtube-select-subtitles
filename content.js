@@ -68,18 +68,18 @@ function clickSettingsButton() {
  */
 function clickMenuSubtitles() {
   return new Promise((resolve, reject) => {
-    let isSuccess = false
     const settingsMenuEl = document.querySelector('.ytp-settings-menu')
     settingsMenuEl.querySelectorAll('.ytp-menuitem').forEach((item) => {
       if (item?.querySelector('.ytp-menuitem-label span')?.innerHTML === '字幕') {
-        item.click()
-        isSuccess = true
-        resolve(true)
+				if (item?.querySelector('.ytp-menuitem-content')?.innerHTML.includes('中文')) {
+        	reject('已有中文字幕')
+				} else {
+					item.click()
+        	resolve(true)
+				}
       }
     })
-    if (!isSuccess) {
-      reject('没有字幕设置项')
-    }
+		reject('没有字幕设置项')
   })
 }
 
