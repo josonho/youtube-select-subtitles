@@ -40,6 +40,7 @@ async function selectFirstSubtitles() {
   }).finally(() => {
   	// 关闭设置弹窗
     document.querySelector('.ytp-settings-button').click()
+		document.body.click()
   })
 }
 
